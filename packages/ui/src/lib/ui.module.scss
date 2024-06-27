@@ -1,0 +1,17 @@
+/*
+ * Replace this with your own classes
+ *
+ * e.g.
+ * .container {
+ * }
+*/
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.rootContainer{
+    background-color: #0b0b0b
+}
+
+@layer base {
+}
