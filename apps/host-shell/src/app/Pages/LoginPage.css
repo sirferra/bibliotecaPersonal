@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;   
 @tailwind utilities;
+
+
+@layer components{
+    .mainContainer{
+        @apply h-screen flex justify-center items-center;
+    }
+    .backgroundAnimated{
+        @apply w-lvw h-700vh bg-all absolute animate-moveBg;
+    }
+    .loginPage-content{
+        @apply z-10 right-0 absolute bg-blackBackground h-screen flex align-middle justify-center w-1/4;
+    }
+    .loginPage-rightColumn{
+        @apply flex justify-center items-center;
+    }
+    .loginPage-buttonContainer{
+        @apply flex justify-between align-middle items-center m-0 p-0
+    }
+    .loginPage-inputContainer{
+        @apply flex flex-col justify-between align-middle items-center m-0 p-0
+    }
+    .loginPage-title{
+        @apply text-white text-xl align-middle justify-center flex p-4
+    }
+    .link{
+        @apply text-sm
+    }
+}

@@ -9,10 +9,13 @@ interface ButtonProps {
     backgroundColor?: LibraryType;
 }
 
-const Button:React.FC<ButtonProps> = ({ label, onClick }) => {
+const Button:React.FC<ButtonProps> = ({ label, onClick, backgroundColor}) => {
     return (  
-        <button className="btn all" onClick={onClick}>
-            {label}
+        <button className={`btn ${backgroundColor}`}  onClick={onClick}>
+            <span>{label}</span>
+            {backgroundColor === LibraryType.All &&
+                <div className='btn-Background'></div>
+            }
         </button>
     );
     

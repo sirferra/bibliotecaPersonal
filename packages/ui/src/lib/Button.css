@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-}
-
-.btn {
-    @apply text-white font-bold py-2 px-4 rounded
-}
-.btn.all{
-    @apply bg-blue-500
+@layer components{
+    .btn {
+        @apply text-white font-bold py-2 px-4 rounded-xl inline-flex items-center justify-center
+    }
+    .btn span{
+        @apply z-10 relative w-fit
+    }
+    .btn span:hover + .btn-Background{
+        @apply brightness-150
+    }
+    .btn-Background{
+        @apply bg-all min-w-full w-28 h-700vh absolute animate-moveBg -z-10 hover:brightness-150
+    }
+    .btn.all{
+        @apply bg-transparent;
+        clip-path: border-box;
+    }
+    .btn.manga{
+        @apply bg-manga;
+    }
 }

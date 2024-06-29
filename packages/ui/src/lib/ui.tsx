@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import './ui.module.scss';
+import './ui.css';
 
 type UiProps = {
   children: ReactNode;
@@ -7,7 +7,8 @@ type UiProps = {
 
 export function Ui(props: UiProps) {
   return (
-    <div className='container'>
+
+    <div className='page-container'>
       {props.children}
     </div>
   );

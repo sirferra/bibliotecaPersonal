@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@biblioteca-personal/redux": ["packages/redux/src/index.ts"],
       "@biblioteca-personal/shared-types": [
         "packages/shared-types/src/index.ts"
       ],

@@ -4,11 +4,14 @@ import { Link, Route, Routes } from 'react-router-dom';
 import LoginPage from './Pages/LoginPage';
 import { Ui } from '@biblioteca-personal/ui';
 import './App.scss';
+import { Provider } from 'react-redux';
+import {store} from '@biblioteca-personal/redux';
 
 const Mangame = React.lazy(() => import('mangame/Module'));
 
 export function App() {
   return (
+    <Provider store={store}>
     <Ui>
       <React.Suspense fallback={null}>
         {/* <ul>
@@ -26,6 +29,7 @@ export function App() {
         </Routes>
       </React.Suspense>
     </Ui>
+    </Provider>
   );
 }
 

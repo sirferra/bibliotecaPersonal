@@ -77,12 +77,13 @@
       }
     },
     "serve-static": {
-      "executor": "@nx/web:file-server",
+      "executor": "@nx/web:webpack",
       "defaultConfiguration": "production",
       "options": {
         "buildTarget": "host-shell:build",
         "watch": false,
-        "port": 4000
+        "port": 4000,
+        "postcssConfig": "packages/ui/postcss.config.js"
       },
       "configurations": {
         "development": {

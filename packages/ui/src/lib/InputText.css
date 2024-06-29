@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .inputTextContainer {
+        @apply w-352 h-14 flex bg-white mb-4 rounded-xl;
+    }
+    .inputTextContainer img{
+        @apply w-6 h-6 bg-white m-4
+    }
+    .inputText{
+        @apply h-14 focus:outline-none w-full rounded-xl font-title font-semibold;
+    }
+
+    .inputText:focus +img {
+        @apply brightness-150
+    }
+}   
