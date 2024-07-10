@@ -1,0 +1,95 @@
+{
+    "name": "auth-page",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/auth-page/src",
+    "projectType": "application",
+    "tags": ["auth-page"],
+    "targets": {
+      "build": {
+        "executor": "@nx/webpack:webpack",
+        "outputs": ["{options.outputPath}"],
+        "defaultConfiguration": "production",
+        "options": {
+          "compiler": "babel",
+          "outputPath": "dist/apps/auth-page",
+          "index": "apps/auth-page/src/index.html",
+          "baseHref": "/",
+          "main": "apps/auth-page/src/main.ts",
+          "tsConfig": "apps/auth-page/tsconfig.app.json",
+          "assets": ["apps/auth-page/src/favicon.ico", "apps/auth-page/src/assets"],
+          "styles": ["apps/auth-page/src/styles.scss"],
+          "scripts": [],
+          "webpackConfig": "apps/auth-page/webpack.config.ts"
+        },
+        "configurations": {
+          "development": {
+            "extractLicenses": false,
+            "optimization": false,
+            "sourceMap": true,
+            "vendorChunk": true
+          },
+          "production": {
+            "fileReplacements": [
+              {
+                "replace": "apps/auth-page/src/environments/environment.ts",
+                "with": "apps/auth-page/src/environments/environment.prod.ts"
+              }
+            ],
+            "optimization": true,
+            "outputHashing": "all",
+            "sourceMap": false,
+            "namedChunks": false,
+            "extractLicenses": true,
+            "vendorChunk": false,
+            "webpackConfig": "apps/auth-page/webpack.config.prod.ts"
+          }
+        }
+      },
+      "serve": {
+        "executor": "@nx/react:module-federation-dev-server",
+        "defaultConfiguration": "development",
+        "options": {
+          "buildTarget": "auth-page:build",
+          "hmr": true,
+          "port": 4002
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "auth-page:build:development"
+          },
+          "production": {
+            "buildTarget": "auth-page:build:production",
+            "hmr": false
+          }
+        }
+      },
+      "lint": {
+        "executor": "@nx/eslint:lint"
+      },
+      "test": {
+        "executor": "@nx/jest:jest",
+        "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+        "options": {
+          "jestConfig": "apps/auth-page/jest.config.ts"
+        }
+      },
+      "serve-static": {
+        "executor": "@nx/web:file-server",
+        "defaultConfiguration": "production",
+        "options": {
+          "buildTarget": "auth-page:build",
+          "watch": false,
+          "port": 4002
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "auth-page:build:development"
+          },
+          "production": {
+            "buildTarget": "auth-page:build:production"
+          }
+        }
+      }
+    }
+  }
+  

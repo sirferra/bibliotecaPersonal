@@ -14,7 +14,7 @@ const config: ModuleFederationConfig = {
    * declare module 'my-external-remote';
    *
    */
-  remotes: ['mangame'],
+  remotes: ['mangame', 'auth-page'],
 };
 
 export default config;

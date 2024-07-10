@@ -1,13 +1,13 @@
 import * as React from 'react';
 
 import { Link, Route, Routes } from 'react-router-dom';
-import LoginPage from './Pages/LoginPage';
 import { Ui } from '@biblioteca-personal/ui';
 import './App.scss';
 import { Provider } from 'react-redux';
 import {store} from '@biblioteca-personal/redux';
 
 const Mangame = React.lazy(() => import('mangame/Module'));
+const AuthPage = React.lazy(()=> import('auth-page/Module'))
 
 export function App() {
   return (
@@ -24,7 +24,7 @@ export function App() {
         </ul> */}
         {/* revisar si el session es válido, caso contrario redirigir siempre a / */}
         <Routes>
-          <Route path="/" element={<LoginPage/>} />
+          <Route path="/" element={<AuthPage/>} />
           <Route path="/mangame" element={<Mangame />} />
         </Routes>
       </React.Suspense>

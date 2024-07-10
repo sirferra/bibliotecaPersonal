@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "outDir": "../../dist/apps/api",
+      "target": "es2017",
+      "module": "commonjs",
+      "lib": ["es2017"],
+      "baseUrl": "./",
+      "incremental": true,
+      "skipLibCheck": true
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist"]
+  }

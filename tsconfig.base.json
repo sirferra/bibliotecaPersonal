@@ -20,7 +20,8 @@
         "packages/shared-types/src/index.ts"
       ],
       "@biblioteca-personal/ui": ["packages/ui/src/index.ts"],
-      "mangame/Module": ["apps/mangame/src/remote-entry.ts"]
+      "mangame/Module": ["apps/mangame/src/remote-entry.ts"],
+      "auth-page/Module": ["apps/auth-page/src/remote-entry.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

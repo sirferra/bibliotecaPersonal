@@ -53,6 +53,7 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "host-shell:build",
+        "proxyConfig": "apps/host-shell/proxy.conf.json",
         "hmr": true,
         "port": 4000
       },
