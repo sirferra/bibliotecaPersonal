@@ -17,3 +17,6 @@ export * as SearchIcon from './search_icon.svg';
 export * as PasswdIcon from './status=hidden.svg';
 export * as PasswdShowIcon from './status=visible.svg';
 export * as UserIcon from './User.svg';
+export * as AllLibrariesIcon from './allLibraries.svg';
+export * as AllLibrariesIcon_32 from './allLibraries_32.svg';
+export * as AllLibrariesIcon_64 from './allLibraries_64.svg';

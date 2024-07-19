@@ -54,6 +54,7 @@ export default function LoginPage(){
     return (
         <div id="loginPage" className="mainContainer">
             <div className="backgroundAnimated"></div>
+            {/* <div className="icon-all"><ui.Icon icon={Icons.all}/></div> */}
             <div className="loginPage-content">
                 <div className="loginPage-rightColumn">
                         {codeSent === false ? 

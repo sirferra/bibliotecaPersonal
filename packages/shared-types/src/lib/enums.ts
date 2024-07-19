@@ -28,4 +28,7 @@ export enum Icons {
     passwd = 'PasswdIcon',
     passwdshow = 'PasswdShowIcon',
     user = 'UserIcon',
+    all = 'AllLibrariesIcon',
+    all_32 = 'AllLibrariesIcon_32',
+    all_64 = 'AllLibrariesIcon_64',
 }

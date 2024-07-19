@@ -1,6 +1,5 @@
 import './Auth-page.scss';
 
-import { Route, Routes, Link } from 'react-router-dom';
 import LoginPage from './Pages/LoginPage';
 
 export function AuthPage() {
@@ -25,7 +24,6 @@ export function AuthPage() {
       //     }
       //   />
       // </Routes>
-
   );
 }
 
